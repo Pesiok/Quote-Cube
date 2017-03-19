@@ -1,0 +1,22 @@
+.quote{
+    color: rgb(255, 255, 255);  
+    font-size: 1.6rem;
+    text-shadow: 2px 2px 2px $mainGray;
+
+
+    &__text {
+      display: block;
+
+       position: absolute;
+       top: 1em;
+       left: 1em;
+    }
+
+    &__author {
+       display: block;
+
+       position: absolute;
+       bottom: 1em;
+       right: 1em;
+    }
+}

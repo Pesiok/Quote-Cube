@@ -1,0 +1,100 @@
+.cube {
+  width: $wallSize;
+  height: $wallSize;
+  perspective: 2 * $wallSize;
+  position: relative;
+
+  transition: transform 0.3s ease-in;
+  //transform: scale(0.4);
+  //transform: rotateX(90deg);
+  
+  box-shadow: 0px 0px 200px 10px $lightGray;
+  background-color: $transparentGray;
+
+  outline: none;
+
+  &:focus,
+  &:hover {
+      transform: scale(1);
+
+      //.cube__wall {
+          
+          
+      //}  
+  }
+
+  &__object {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        /*Default: flat*/
+        transform-style: preserve-3d;
+        transform: translateZ(-$translateSize);
+        transition: transform 1s;
+
+        &.get-front {
+            transform: translateZ(-$translateSize);
+
+        }
+
+        &.get-back {
+            transform: translateZ(-$translateSize) rotateX(-180deg);
+        }
+
+         &.get-left {
+            transform: translateZ(-$translateSize) rotateY(90deg);
+        }
+
+        &.get-right {
+            transform: translateZ(-$translateSize) rotateY(-90deg);
+        }
+
+        &.get-top {
+            transform: translateZ(-$translateSize) rotateX(-90deg);
+        }
+
+        &.get-bottom {
+            transform: translateZ(-$translateSize) rotateX(90deg); 
+        }
+
+    }
+
+    &__wall {
+        position: absolute;
+        width: $wallSize;
+        height: $wallSize;
+        border: 1px solid $lightGray;
+        box-shadow: inset 0px 0px 150px 65px $lightGray;
+        opacity: 0.8;
+
+        &--front {
+            transform: translateZ($translateSize);
+            background-color: $mainGray;
+        }
+
+        &--back {
+            transform: rotateX(180deg) translateZ($translateSize);
+            background-color: $mainGray;
+        }
+
+        &--left {
+            transform: rotateY(-90deg) translateZ($translateSize);
+            background-color: $mainGray;
+        }
+
+        &--right {
+            transform: rotateY(90deg) translateZ($translateSize);
+            background-color: $mainGray;
+        }
+
+        &--top {
+            transform: rotateX(90deg) translateZ($translateSize);
+            background-color: $mainGray;
+        }
+
+        &--bottom {
+            transform: rotateX(-90deg) translateZ($translateSize);
+            background-color: $mainGray;
+        }
+    }
+}
