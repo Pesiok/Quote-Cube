@@ -1,22 +1,40 @@
 .quote{
+    font-family: 'Roboto', sans-serif;
     color: rgb(255, 255, 255);  
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     text-shadow: 2px 2px 2px $mainGray;
 
-
     &__text {
-      display: block;
-
+       display: block;
        position: absolute;
-       top: 1em;
-       left: 1em;
+       top: 0.5em;
+       left: 0.5em;
+
+       @include atMedium {
+           top: 1em;
+           left: 1em;
+       }
+
+       @include atExtraLarge {
+           top: 2em;
+           left: 2em;
+       }
     }
 
     &__author {
        display: block;
-
        position: absolute;
-       bottom: 1em;
-       right: 1em;
+       bottom: 0.5em;
+       right: 0.5em;
+
+       @include atMedium {
+           bottom: 1em;
+           right: 1em;
+       }
+
+       @include atExtraLarge {
+           bottom: 2em;
+           right: 2em;
+       }
     }
 }

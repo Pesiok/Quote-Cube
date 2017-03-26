@@ -1,6 +1,9 @@
-@import 'normalize/import-now';
-@import 'base/_variables';
-@import 'base/_global';
-@import 'modules/_cube';
-@import 'modules/_quote';
-@import 'modules/_background';
+@import 'normalize/_import-now.scss';
+@import 'base/_variables.scss';
+@import 'base/_mixins.scss';
+@import 'base/_global.scss';
+@import 'modules/_cube.scss';
+@import 'modules/_quote.scss';
+@import 'modules/_background.scss';
+@import 'modules/_modal.scss';
+@import 'modules/_generator-header.scss';

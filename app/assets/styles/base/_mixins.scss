@@ -1,0 +1,164 @@
+//media queries
+
+@mixin atSmall {
+  @media (min-width: #{$smallSize}) {
+    @content;
+  }
+}
+
+@mixin atMedium {
+  @media (min-width: #{$mediumSize}) {
+    @content;
+  }
+}
+
+@mixin atLarge {
+  @media (min-width: #{$largeSize}) {
+    @content;
+  }
+}
+
+@mixin atExtraLarge {
+  @media (min-width: #{$extraLargeSize}) {
+    @content;
+  }
+}
+
+//cube mixins
+
+@mixin translateZMinusBare {
+    transform: translateZ(- $wallSize / 2);
+
+    @include atSmall {
+        transform: translateZ(-($wallSize * $small ) / 2);
+    }
+    @include atMedium {
+        transform: translateZ(-($wallSize * $medium ) / 2);
+    }
+    @include atLarge {
+        transform: translateZ(-($wallSize * $large ) / 2);
+    }
+    @include atExtraLarge {
+        transform: translateZ(-($wallSize * $extraLarge) / 2);
+    }
+}
+
+@mixin translateZBare {
+    transform: translateZ($wallSize / 2);
+
+    @include atSmall {
+        transform: translateZ(($wallSize * $small ) / 2);
+    }
+    @include atMedium {
+        transform: translateZ(($wallSize * $medium ) / 2);
+    }
+    @include atLarge {
+        transform: translateZ(($wallSize * $large ) / 2);
+    }
+    @include atExtraLarge {
+        transform: translateZ(($wallSize * $extraLarge) / 2);
+    }
+}
+
+@mixin translateZ($feature) {
+    transform: $feature translateZ($wallSize / 2);
+
+    @include atSmall {
+        transform: $feature translateZ(($wallSize * $small ) / 2);
+    }
+    @include atMedium {
+        transform: $feature translateZ(($wallSize * $medium ) / 2);
+    }
+    @include atLarge {
+        transform: $feature translateZ(($wallSize * $large ) / 2);
+    }
+    @include atExtraLarge {
+        transform: $feature translateZ(($wallSize * $extraLarge) / 2);
+    }
+}
+
+@mixin translateZMinus($feature) {
+    transform: translateZ(-$wallSize / 2 ) $feature;
+
+    @include atSmall {
+        transform: translateZ(-($wallSize * $small ) / 2) $feature;
+    }
+    @include atMedium {
+        transform: translateZ(-($wallSize * $medium ) / 2) $feature;
+    }
+    @include atLarge {
+        transform: translateZ(-($wallSize * $large ) / 2) $feature;
+    }
+    @include atExtraLarge {
+        transform:  translateZ(-($wallSize * $extraLarge) / 2) $feature;
+    }
+}
+
+@mixin cubeShadowUp($color) {
+     border-left: 1px solid $color;
+     border-bottom: 1px solid $color;
+
+    box-shadow: 6px -6px 0px 0px $color,
+                5px -5px 0px 0px $color,
+                4px -4px 0px 0px $color,
+                3px -3px 0px 0px $color,
+                2px -2px 0px 0px $color,
+                1px -1px 0px 0px $color;
+}
+
+@mixin cubeShadowDown($color) {
+    border-left: 1px solid $color;
+    border-top: 1px solid $color;
+
+    box-shadow: 6px 6px 0px 0px $color,
+                5px 5px 0px 0px $color,
+                4px 4px 0px 0px $color,
+                3px 3px 0px 0px $color,
+                2px 2px 0px 0px $color,
+                1px 1px 0px 0px $color;
+}
+
+/* based on http://enjoycss.com example */
+@mixin cubeBackground($color1, $color2, $color3) {
+    background: 
+              linear-gradient( 30deg, 
+            $color1 12%, 
+            rgba(0,0,0,0) 12.5%, 
+            rgba(0,0,0,0) 87%, 
+            $color1 87.5%, 
+            $color1 0),
+              linear-gradient(150deg, 
+            $color1 12%, 
+            rgba(0,0,0,0) 12.5%, 
+            rgba(0,0,0,0) 87%, 
+            $color1 87.5%, 
+            $color1 0), 
+            linear-gradient(30deg, 
+            $color1 12%, 
+            rgba(0,0,0,0) 12.5%, 
+            rgba(0,0,0,0) 87%, 
+            $color1 87.5%, 
+            $color1 0), 
+            linear-gradient(150deg, 
+            $color1 12%, 
+            rgba(0,0,0,0) 12.5%, 
+            rgba(0,0,0,0) 87%, 
+            $color1 87.5%, 
+            $color1 0), 
+            linear-gradient(60deg, 
+            $color2 25%, 
+            rgba(0,0,0,0) 25.5%, 
+            rgba(0,0,0,0) 75%, 
+            $color2 75%, 
+            $color2 0), 
+            linear-gradient(60deg, 
+            $color2 25%, 
+            rgba(0,0,0,0) 25.5%, 
+            rgba(0,0,0,0) 75%, 
+            $color2 75%, 
+            $color2 0), 
+            $color3;
+            
+        background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+        background-size: 80px 140px;
+}

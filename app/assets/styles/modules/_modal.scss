@@ -1,0 +1,89 @@
+.modal {
+    position: absolute;
+    z-index: 999;        
+
+    width: 100%;
+    height: 100%;
+
+    color: rgb(255, 255, 255);  
+    font-size: 1.6rem;
+    background-color: $transparentGray;
+
+    transition: transform 0.5s ease-out;
+
+    &::before {
+        position: absolute;
+        content: "";
+
+        width: 100%;
+        height: 100%;
+       
+        @include cubeBackground(
+            $mainGray, 
+            $mainGray * 1.1, 
+            $mainGray * 1.2);
+    }
+
+    &--start {
+        transform: translateY(-100%);
+        
+    }
+    &--disable {
+        display: none;
+
+        & > * {
+            display: none;
+        }
+    }
+    
+    &__content {
+         position: relative;
+         top: 25%;
+         text-align: center;
+    }
+
+    &__logo {
+         font-family: 'Audiowide', cursive; 
+         font-size: 6rem;
+         text-shadow: 2px 2px 2px $lightBlack;
+    }
+
+    &__text {
+        font-family: 'Roboto', sans-serif; 
+        font-size: 2rem;
+        
+        p {
+            margin: 0.5em;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        display: block;
+
+        bottom: 1em;
+        left: 50%;
+        transform: translateX(-50%);
+
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        color: rgb(255, 255, 255);
+        font-size: 1.5rem;
+
+        max-width: 50%;
+        min-height: 2em;
+        padding: 0.5em 2em;
+
+        background: none;
+        border: none;
+        background-color: $mainGray;
+
+        transition: transform 0.5s ease-in;
+    
+        @include cubeShadowUp($lightBlack);
+
+        &--active {
+            transform: translateX(-50%) rotateY(90deg);
+        }
+    }
+}

@@ -4,50 +4,67 @@
     <meta charset="UTF-8">
     <title>hqube</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Roboto" rel="stylesheet">
     <!-- build:css assets/styles/styles.css -->
     <link rel="stylesheet" href="temp/styles/styles.css">
     <!-- endbuild -->
 </head>
 <body class="background">
-    <div role="button" tabindex="0" id="cube" class="cube">
+    <header class="generator-header">
+        <h1 class="generator-header__logo">hqube</h1>
+    </header>
+    <main role="button" tabindex="0" id="cube" class="cube">
         <div id="cube__object" class="cube__object animation">
-            <div class="cube__wall cube__wall--front">
-                <div class="quote">
-                    <q class="quote__text">Click on the cube to rotate it and get a brand new quote!</q>
-                    <cite class="quote__author">Page author</cite>
-                </div>
+            <div class="cube__wall cube__wall--front" aria-hidden="false">
+                <figure class="quote">
+                    <q class="quote__text">Don't believe everything you read on the internet.</q>
+                    <figcaption><cite class="quote__author">Albert Einstein</cite></figcaption>
+                </figure>
             </div>
-            <div class="cube__wall cube__wall--back">
-                <div class="quote" aria-hidden="true">
+            <div class="cube__wall cube__wall--back " aria-hidden="true">
+                <figure class="quote">
                     <q class="quote__text"></q>
-                    <cite class="quote__author"></cite>
-                </div>
+                    <figcaption><cite class="quote__author"></cite></figcaption>
+                </figure>
             </div>
-            <div class="cube__wall cube__wall--left">
-                <div class="quote" aria-hidden="true">
+            <div class="cube__wall cube__wall--left" aria-hidden="true">
+                <figure class="quote">
                     <q class="quote__text"></q>
-                    <cite class="quote__author"></cite>
-                </div>
+                    <figcaption><cite class="quote__author"></cite></figcaption>
+                </figure>
             </div>
-            <div class="cube__wall cube__wall--right">
-                <div class="quote" aria-hidden="true">
+            <div class="cube__wall cube__wall--right" aria-hidden="true">
+                <figure class="quote">
                     <q class="quote__text"></q>
-                    <cite class="quote__author"></cite>
-                </div>
+                    <figcaption><cite class="quote__author"></cite></figcaption>
+                </figure>
             </div>
-            <div class="cube__wall cube__wall--top">
-                <div class="quote" aria-hidden="true">
+            <div class="cube__wall cube__wall--top" aria-hidden="true">
+                <figure class="quote">
                     <q class="quote__text"></q>
-                    <cite class="quote__author"></cite>
-                </div>
+                    <figcaption><cite class="quote__author"></cite></figcaption>
+                </figure>
             </div>
-            <div class="cube__wall cube__wall--bottom">
-                <div class="quote" aria-hidden="true">
+            <div class="cube__wall cube__wall--bottom" aria-hidden="true">
+                <figure class="quote">
                     <q class="quote__text"></q>
-                    <cite class="quote__author"></cite>
-                </div>
+                    <figcaption><cite class="quote__author"></cite></figcaption>
+                </figure>
             </div>
         </div>
+    </main>
+    <footer class="generator-footer">
+        
+    </footer>
+    <div id="modal" class="modal">
+        <div class="modal__content">
+            <h2 class="modal__logo">hqube</h2>
+            <div class="modal__text">
+                <p>A simple random quote fetcher.</p>
+                <p>Get a new quote by clicking on the cube.</p>
+            </div>
+        </div>
+        <button id="modalBtn" class="modal__btn">Click here to get started.</button>
     </div>
     
     <!-- build:js assets/scripts/App.js -->
