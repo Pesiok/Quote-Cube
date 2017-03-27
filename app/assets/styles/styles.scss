@@ -2,8 +2,10 @@
 @import 'base/_variables.scss';
 @import 'base/_mixins.scss';
 @import 'base/_global.scss';
+@import 'modules/_particles.scss';
 @import 'modules/_cube.scss';
 @import 'modules/_quote.scss';
 @import 'modules/_background.scss';
 @import 'modules/_modal.scss';
-@import 'modules/_generator-header.scss';
+@import 'modules/_site-header.scss';
+@import 'modules/_site-footer.scss';

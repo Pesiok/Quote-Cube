@@ -1,21 +1,23 @@
-.generator-header {
+.site-header {
     position: absolute;
     top: 2.5%;
-    left: 1.5%;
+    left: 2em;
 
     @include cubeShadowDown($lightBlack);
 
     &__logo {
+         background: none;
+         border: none;
+
+         cursor: pointer;
+    
          text-align: center;
          font-family: 'Audiowide', cursive; 
          font-size: 2rem;
          color: rgb(255, 255, 255);
          text-shadow: 2px 2px 2px $lightBlack;
 
-         
          margin: 0;
          padding: 0.25em 0.5em;
-
-
     }
 }

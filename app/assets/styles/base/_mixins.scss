@@ -106,6 +106,18 @@
                 1px -1px 0px 0px $color;
 }
 
+@mixin cubeShadowUpReverse($color) {
+     border-right: 1px solid $color;
+     border-bottom: 1px solid $color;
+
+    box-shadow: -6px -6px 0px 0px $color,
+                -5px -5px 0px 0px $color,
+                -4px -4px 0px 0px $color,
+                -3px -3px 0px 0px $color,
+                -2px -2px 0px 0px $color,
+                -1px -1px 0px 0px $color;
+}
+
 @mixin cubeShadowDown($color) {
     border-left: 1px solid $color;
     border-top: 1px solid $color;

@@ -1,0 +1,28 @@
+.site-footer {
+    position: absolute;
+    bottom: 2.5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+
+    &__icon {
+        display: block;
+        width: 2.5em;
+        height: 2.5em;
+
+        margin: 0;
+        padding: 0.25em 0.25em;
+
+        &--twitter {
+            @include cubeShadowUp($lightBlack);
+            margin-left: 2em;
+        }
+
+        &--github {
+            @include cubeShadowUpReverse($lightBlack);
+            margin-right: 2em;
+        }
+
+    }
+}

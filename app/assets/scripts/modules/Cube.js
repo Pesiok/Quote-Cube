@@ -15,6 +15,7 @@ class Cube {
             "get-bottom"
             ];
         this.randWall = "get-front";
+        this.twitterBtn = document.getElementById("twitterBtn");
 
         this.events();
     }
@@ -52,12 +53,16 @@ class Cube {
     
     getQuote(data) {
         const activeWall = this.walls[this.getWall.indexOf(this.randWall)];
-        console.log(activeWall);
+        const queryString = "https://twitter.com/share?text=" + encodeURIComponent(data.quote + " ~ " + data.author);
+        
+        //change wall content
         activeWall.setAttribute("aria-hidden", "false");
         activeWall.querySelector(".quote__text").innerHTML = data.quote;
         activeWall.querySelector(".quote__author").innerHTML = data.author;
+        //update Share link
+        this.twitterBtn.setAttribute("href", queryString);
     }
-
+    
     fetchQuote() {
          const options = {  
             method: "GET",  

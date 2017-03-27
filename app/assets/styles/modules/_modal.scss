@@ -9,7 +9,7 @@
     font-size: 1.6rem;
     background-color: $transparentGray;
 
-    transition: transform 0.5s ease-out;
+    transition: transform 0.5s;
 
     &::before {
         position: absolute;
@@ -24,10 +24,6 @@
             $mainGray * 1.2);
     }
 
-    &--start {
-        transform: translateY(-100%);
-        
-    }
     &--disable {
         display: none;
 
@@ -60,6 +56,7 @@
     &__btn {
         position: absolute;
         display: block;
+        cursor: pointer;
 
         bottom: 1em;
         left: 50%;

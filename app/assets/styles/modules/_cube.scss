@@ -1,5 +1,6 @@
 .cube {
     position: relative;
+    cursor: pointer;
 
     z-index: 99;
 
@@ -31,8 +32,6 @@
 
     transition: transform 0.3s ease-in;
     
-
-
     &:focus,
     &:hover {
         .cube__wall {
@@ -47,11 +46,10 @@
         height: 100%;
 
         transform-style: preserve-3d;
-
         transition: transform 1s;
+
         @include translateZMinusBare;
 
-        //box-shadow: 0px 0px 200px 10px $lightGray;
 
         &--get-front {
             @include translateZMinusBare;
@@ -101,44 +99,38 @@
             height: $extraLarge * $wallSize;
         }
 
-        border: 1px solid $lightGray;
+        border: 1px solid $lightBlack;
         transition: box-shadow 0.3s ease-in;
         box-shadow: inset 0px 0px 110px 15px $lightBlack;
         opacity: 0.8;
 
         &--front {
             @include translateZBare;
-
             background-color: $mainGray;
         }
 
         &--back {
             @include translateZ(rotateX(180deg));
-
             background-color: $mainGray;
         }
 
         &--left {
             @include translateZ(rotateY(-90deg));
-
             background-color: $mainGray;
         }
 
         &--right {
             @include translateZ(rotateY(90deg));
-
             background-color: $mainGray;
         }
 
         &--top {
             @include translateZ(rotateX(90deg));
-
             background-color: $mainGray;
         }
 
         &--bottom {
             @include translateZ(rotateX(-90deg));
-
             background-color: $mainGray;
         }
     }

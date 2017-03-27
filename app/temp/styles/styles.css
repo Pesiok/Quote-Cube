@@ -419,8 +419,16 @@ template {
 html {
   font-size: 62.5%; }
 
+.particles {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: -999; }
+
 .cube {
   position: relative;
+  cursor: pointer;
   z-index: 99;
   width: 25em;
   height: 25em;
@@ -555,7 +563,7 @@ html {
     position: absolute;
     width: 25em;
     height: 25em;
-    border: 1px solid #a8a1a1;
+    border: 1px solid #0a0707;
     transition: box-shadow 0.3s ease-in;
     box-shadow: inset 0px 0px 110px 15px #0a0707;
     opacity: 0.8; }
@@ -732,7 +740,7 @@ html {
   color: white;
   font-size: 1.6rem;
   background-color: rgba(52, 52, 52, 0.2);
-  transition: transform 0.5s ease-out; }
+  transition: transform 0.5s; }
   .modal::before {
     position: absolute;
     content: "";
@@ -741,8 +749,6 @@ html {
     background: linear-gradient(30deg, #343434 12%, transparent 12.5%, transparent 87%, #343434 87.5%, #343434 0), linear-gradient(150deg, #343434 12%, transparent 12.5%, transparent 87%, #343434 87.5%, #343434 0), linear-gradient(30deg, #343434 12%, transparent 12.5%, transparent 87%, #343434 87.5%, #343434 0), linear-gradient(150deg, #343434 12%, transparent 12.5%, transparent 87%, #343434 87.5%, #343434 0), linear-gradient(60deg, #393939 25%, transparent 25.5%, transparent 75%, #393939 75%, #393939 0), linear-gradient(60deg, #393939 25%, transparent 25.5%, transparent 75%, #393939 75%, #393939 0), #3e3e3e;
     background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
     background-size: 80px 140px; }
-  .modal--start {
-    transform: translateY(-100%); }
   .modal--disable {
     display: none; }
     .modal--disable > * {
@@ -763,6 +769,7 @@ html {
   .modal__btn {
     position: absolute;
     display: block;
+    cursor: pointer;
     bottom: 1em;
     left: 50%;
     transform: translateX(-50%);
@@ -783,14 +790,17 @@ html {
     .modal__btn--active {
       transform: translateX(-50%) rotateY(90deg); }
 
-.generator-header {
+.site-header {
   position: absolute;
   top: 2.5%;
-  left: 1.5%;
+  left: 2em;
   border-left: 1px solid #0a0707;
   border-top: 1px solid #0a0707;
   box-shadow: 6px 6px 0px 0px #0a0707, 5px 5px 0px 0px #0a0707, 4px 4px 0px 0px #0a0707, 3px 3px 0px 0px #0a0707, 2px 2px 0px 0px #0a0707, 1px 1px 0px 0px #0a0707; }
-  .generator-header__logo {
+  .site-header__logo {
+    background: none;
+    border: none;
+    cursor: pointer;
     text-align: center;
     font-family: 'Audiowide', cursive;
     font-size: 2rem;
@@ -798,3 +808,26 @@ html {
     text-shadow: 2px 2px 2px #0a0707;
     margin: 0;
     padding: 0.25em 0.5em; }
+
+.site-footer {
+  position: absolute;
+  bottom: 2.5%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
+  .site-footer__icon {
+    display: block;
+    width: 2.5em;
+    height: 2.5em;
+    margin: 0;
+    padding: 0.25em 0.25em; }
+    .site-footer__icon--twitter {
+      border-left: 1px solid #0a0707;
+      border-bottom: 1px solid #0a0707;
+      box-shadow: 6px -6px 0px 0px #0a0707, 5px -5px 0px 0px #0a0707, 4px -4px 0px 0px #0a0707, 3px -3px 0px 0px #0a0707, 2px -2px 0px 0px #0a0707, 1px -1px 0px 0px #0a0707;
+      margin-left: 2em; }
+    .site-footer__icon--github {
+      border-right: 1px solid #0a0707;
+      border-bottom: 1px solid #0a0707;
+      box-shadow: -6px -6px 0px 0px #0a0707, -5px -5px 0px 0px #0a0707, -4px -4px 0px 0px #0a0707, -3px -3px 0px 0px #0a0707, -2px -2px 0px 0px #0a0707, -1px -1px 0px 0px #0a0707;
+      margin-right: 2em; }

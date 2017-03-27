@@ -15,6 +15,7 @@
   "dependencies": {
     "babel-polyfill": "^6.23.0",
     "normalize-scss": "^6.0.0",
+    "particles.js": "^2.0.0",
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
