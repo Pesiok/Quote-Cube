@@ -707,30 +707,13 @@ html {
         right: 2em; } }
 
 .background {
-  width: 100vw;
-  height: 100vh;
+  position: absolute;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #343434;
-  /*
-    &::before {
-        width: 100%;
-        height: 100%;
-
-        content: "";
-        position: absolute;
-
-        z-index: -99;
-        perspective: 2 * $wallSize;
-
-        transform: translateZ(-$wallSize) rotateX(-60deg);
-        
-
-        //background-image: url(http://danbooru.donmai.us/data/__original_drawn_by_lpip__3b64ea8c776f095c849f6b8e027a7ab9.jpg);
-        border: 1em solid $lightGray;
-    }
-    */ }
+  background-color: #343434; }
 
 .modal {
   position: absolute;
@@ -760,7 +743,9 @@ html {
   .modal__logo {
     font-family: 'Audiowide', cursive;
     font-size: 6rem;
-    text-shadow: 2px 2px 2px #0a0707; }
+    text-shadow: 2px 2px 2px #0a0707;
+    margin: 0;
+    margin-bottom: 0.2em; }
   .modal__text {
     font-family: 'Roboto', sans-serif;
     font-size: 2rem; }

@@ -3315,10 +3315,24 @@ module.exports = g;
 
 module.exports = {
 	"selector": ".particles",
-	"maxParticles": 80,
+	"maxParticles": 150,
 	"color": "#a09f9f",
 	"connectParticles": "true",
 	"responsive": [
+		{
+			"breakpoint": 1630,
+			"options": {
+				"maxParticles": 100,
+				"connectParticles": true
+			}
+		},
+		{
+			"breakpoint": 1280,
+			"options": {
+				"maxParticles": 80,
+				"connectParticles": true
+			}
+		},
 		{
 			"breakpoint": 768,
 			"options": {
@@ -3329,14 +3343,14 @@ module.exports = {
 		{
 			"breakpoint": 425,
 			"options": {
-				"maxParticles": 30,
+				"maxParticles": 20,
 				"connectParticles": true
 			}
 		},
 		{
 			"breakpoint": 320,
 			"options": {
-				"maxParticles": 15
+				"maxParticles": 10
 			}
 		}
 	]
